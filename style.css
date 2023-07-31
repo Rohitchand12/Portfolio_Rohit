@@ -362,9 +362,14 @@ a:hover {
     .brand{
         display:none;
     }
-    
+    .intro{
+        height:87vh;
+        justify-content: center;
+        align-items: center;
+    }
     .intro-content{
         width:100%;
+        height:auto;
         font-size: 2rem;
         margin-left:0;
         margin-top:4%;
@@ -376,7 +381,7 @@ a:hover {
     .about-me{
         display: flex;
         flex-direction: column;
-        height:80vh;
+        height:55vh;
         width:80vw;
         margin:0 auto;
     }
