@@ -1,0 +1,465 @@
+* {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --color-0: rgb(0, 0, 0);
+    --color-1: #5800FF;
+    --color-2: #FFC600;
+    --color-3: #D2DAFF;
+    --color-4: #EEF1FF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, #000000 100%), url('1.avif');
+    background-attachment: fixed;
+    overflow-x: hidden;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-4);
+
+}
+
+.break {
+    height: 0;
+    flex-basis: 100%;
+}
+
+/* navigation bar  */
+
+nav {
+    position: relative;
+    background-color: rgba(1, 1, 1, 0.1);
+    height: 88.5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-right: 1%;
+    transition: all 700ms ease-in;
+}
+
+
+.content-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    width: 70%;
+}
+
+.contents {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--color-4);
+    margin-right: 6%;
+    font-family: 'Source Code Pro', monospace;
+}
+
+a:hover {
+    transition: all 700ms ease;
+    color: var(--color-2);
+}
+
+.hamburger {
+    display: none;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+/*************************************************/
+/* header intro section  */
+
+.intro {
+    position: relative;
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    padding-top: 6%;
+    overflow: hidden;
+}
+
+.intro-content {
+    position:absolute;
+    width: 40%;
+    height: 100%;
+    margin-left: 12%;
+    color: var(--color-4);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2.5rem;
+}
+
+.about {
+    display: flex;
+    margin-bottom:10%;
+}
+
+.cursor {
+    display: inline-block;
+    height: 50px;
+    width: 2px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .4s linear infinite alternate;
+} 
+
+/* about me section  */
+
+.about-me{
+    display: flex;
+    height:50vh;
+    width:80vw;
+    margin:2% auto;
+}
+.h-left{
+    color:white;
+    align-items: center;
+    font-family: 'Signika', sans-serif;
+    font-size: 2.7rem;
+    display: flex;
+    height:100%;
+    width:50%;
+}
+.c-right{
+    color:white;
+    align-items: center;
+    font-family: 'Signika', sans-serif;
+    display: flex;
+    height:100%;
+    width:50%;
+}
+.more-about {
+    width:60%;
+    height:auto;
+    border-bottom: 1px solid var(--color-1);
+}
+.about-me-info{
+    width:60%;
+    height:auto;
+    line-height:1.8;
+    color:rgb(185, 183, 183)
+}
+
+
+
+/* academics section here */
+
+.academics{
+    display:flex;
+    height:auto;
+    width:90%;
+    margin:2% auto;
+    box-sizing: border-box;
+}
+.panel{
+    transition: all 700ms ease-in-out;
+    border: 1px solid rgb(138, 137, 137);
+    border-radius: 10px;
+    overflow:hidden;
+}
+.college{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:60vh;
+    width:70%;
+    margin: 1.5%;
+    border-radius: 10px;
+    cursor:pointer;
+    
+}
+.inter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:60vh;
+    width:15%;
+    margin: 1.5%;
+ 
+    border-radius: 10px;
+    cursor:pointer;
+}
+.high-schl{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:60vh;
+    width:15%;
+    margin: 1.5%;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.heading{
+    height:70%;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    color:white;
+    font-family: 'Signika', sans-serif;
+}
+.heading-content{
+    height:70%;
+    width:50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding:2%;
+    color:rgb(185, 183, 183);
+}
+.show{
+    display:flex;
+}
+.show-content{
+    animation-name: fade-in;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.div-not-active{
+    transform: rotate(-90deg);
+    height: 70%;
+    width:50%;
+   
+}
+
+.active{
+    width:70%;
+}
+.not-active{
+    width:15%;
+}
+
+.horiz{
+    animation-name: horizontal;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-right: 2px dashed white;
+
+}
+
+.vert{
+    animation-name: vertical;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-right: none;
+}
+
+
+
+@keyframes fade-in {
+    0%{
+        opacity:0;
+    }
+    33%{
+        opacity:0;
+    }
+    66%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+    
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1
+    }
+
+    33% {
+        opacity: 1
+    }
+
+    66% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+@keyframes horizontal {
+    0%{
+        transform: rotate(-90deg);
+    }
+    20%{
+        transform: rotate(-72deg);
+    }
+    40%{
+        transform: rotate(-54deg);
+    }
+    60%{
+        transform: rotate(-36deg);
+    }
+    80%{
+        transform: rotate(-18deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes vertical {
+    0%{
+        transform: rotate(0);
+    }
+    20%{
+        transform: rotate(-18deg);
+    }
+    40%{
+        transform: rotate(-36deg);
+    }
+    60%{
+        transform: rotate(-54deg);
+    }
+    80%{
+        transform: rotate(-72deg);
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+}
+
+/* media queries */
+@media only screen and (max-width: 768px) {
+    .content-container {
+        display: none;
+        top: 100%;
+        width: 40%;
+        flex-basis: 40%;
+        flex-direction: column;
+
+    }
+
+    .contents {
+        display: flex;
+        justify-content: end;
+    }
+
+    .hamburger {
+        flex-basis: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .brand{
+        display:none;
+    }
+    
+    .intro-content{
+        width:100%;
+        font-size: 2rem;
+        margin-left:0;
+        margin-top:4%;
+        text-align: center;
+    }
+    .about{
+        padding-left: 8%;
+    }
+    .about-me{
+        display: flex;
+        flex-direction: column;
+        height:80vh;
+        width:80vw;
+        margin:0 auto;
+    }
+    .h-left{
+        color:white;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Signika', sans-serif;
+        font-size: 1.25rem;
+        display: flex;
+        height:auto;
+        width:auto;
+    }
+    .c-right{
+        color:white;
+        font-family: 'Signika', sans-serif;
+        display: flex;
+        height:100%;
+        width:100%;
+    }
+    .about-me-info{
+        width:100%;
+        height:70%;
+        line-height:1.8;
+        color:rgb(185, 183, 183)
+    }
+
+
+    .academics{
+        display:flex;
+        height:auto;
+        width:100vw;
+        margin:1% auto;
+        box-sizing: border-box;
+    }
+
+    .college,.inter,.high-schl{
+        flex-direction: column;
+    }
+    .heading-content{
+        height:70%;
+        width:100%;
+        justify-content: center;
+        align-items: center;
+        color:rgb(185, 183, 183);
+        margin:2%;
+        padding:8%;
+    }
+    .show-content{
+        height:100%;
+    }
+    .horiz{
+        animation-name: horizontal;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        border-bottom: 2px dashed white;
+        border-right: none;
+    
+    }
+    
+    .vert{
+        animation-name: vertical;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        border-bottom: none;
+    }
+
+    .heading{
+        height:50%;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25rem;
+        color:white;
+        margin: 2%;
+        font-family: 'Signika', sans-serif;
+    }
+    
+
+
+}
