@@ -34,22 +34,11 @@ const removeActive = ()=>{
 
 
 toggler.addEventListener('click', () => {
-    if (document.querySelector('.content-container').style.display === 'none')
-        document.querySelector('.content-container').style.display = 'block'
-    else {
-        document.querySelector('.content-container').style.display = 'none'
-    }
+   document.querySelector('nav').classList.add("navbar-expand");
+   let list = document.querySelector('.list');
+
+   list.style.display = 'flex';
 })
-
-
-
-
-
-
-
-
-
-
 
 const multipleTyping = async(carousel,sentence, delay)=>{
 

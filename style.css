@@ -39,33 +39,37 @@ nav {
     position: relative;
     background-color: rgba(1, 1, 1, 0.1);
     height: 88.5px;
-    width: 100%;
+    width: 100vw;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    align-items: center;
     padding-right: 1%;
     transition: all 700ms ease-in;
 }
 
-
-.content-container {
-    position: absolute;
+.navbar-expand {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: auto;
-    width: 70%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    z-index: 100;
+    background: #5c5050;
 }
-
-.contents {
+.list{
     display: flex;
+    width:50%;
+    justify-content: end;
+}
+.contents {
     text-decoration: none;
     font-size: 1.2rem;
     color: var(--color-4);
     margin-right: 6%;
     font-family: 'Source Code Pro', monospace;
 }
+
 
 a:hover {
     transition: all 700ms ease;
@@ -74,7 +78,6 @@ a:hover {
 
 .hamburger {
     display: none;
-    margin-right: 2%;
     cursor: pointer;
 }
 
@@ -91,7 +94,7 @@ a:hover {
 }
 
 .intro-content {
-    position:absolute;
+    position: absolute;
     width: 40%;
     height: 100%;
     margin-left: 12%;
@@ -102,7 +105,7 @@ a:hover {
 
 .about {
     display: flex;
-    margin-bottom:10%;
+    margin-bottom: 10%;
 }
 
 .cursor {
@@ -112,138 +115,152 @@ a:hover {
     background-color: white;
     margin-left: 8px;
     animation: blink .4s linear infinite alternate;
-} 
+}
 
 /* about me section  */
 
-.about-me{
+.about-me {
     display: flex;
-    height:50vh;
-    width:80vw;
-    margin:2% auto;
+    height: 50vh;
+    width: 80vw;
+    margin: 2% auto;
 }
-.h-left{
-    color:white;
+
+.h-left {
+    color: white;
     align-items: center;
     font-family: 'Signika', sans-serif;
     font-size: 2.7rem;
     display: flex;
-    height:100%;
-    width:50%;
+    height: 100%;
+    width: 50%;
 }
-.c-right{
-    color:white;
+
+.c-right {
+    color: white;
     align-items: center;
     font-family: 'Signika', sans-serif;
     display: flex;
-    height:100%;
-    width:50%;
+    height: 100%;
+    width: 50%;
 }
+
 .more-about {
-    width:60%;
-    height:auto;
+    width: 60%;
+    height: auto;
     border-bottom: 1px solid var(--color-1);
 }
-.about-me-info{
-    width:60%;
-    height:auto;
-    line-height:1.8;
-    color:rgb(185, 183, 183)
+
+.about-me-info {
+    width: 60%;
+    height: auto;
+    line-height: 1.8;
+    color: rgb(185, 183, 183)
 }
 
 
 
 /* academics section here */
 
-.academics{
-    display:flex;
-    height:auto;
-    width:90%;
-    margin:2% auto;
+.academics {
+    display: flex;
+    height: auto;
+    width: 90%;
+    margin: 2% auto;
     box-sizing: border-box;
 }
-.panel{
+
+.panel {
     transition: all 700ms ease-in-out;
     border: 1px solid rgb(138, 137, 137);
     border-radius: 10px;
-    overflow:hidden;
+    overflow: hidden;
 }
-.college{
-    display:flex;
+
+.college {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:60vh;
-    width:70%;
+    height: 60vh;
+    width: 70%;
     margin: 1.5%;
     border-radius: 10px;
-    cursor:pointer;
-    
+    cursor: pointer;
+
 }
-.inter{
-    display:flex;
+
+.inter {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:60vh;
-    width:15%;
+    height: 60vh;
+    width: 15%;
     margin: 1.5%;
- 
+
     border-radius: 10px;
-    cursor:pointer;
+    cursor: pointer;
 }
-.high-schl{
-    display:flex;
+
+.high-schl {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:60vh;
-    width:15%;
+    height: 60vh;
+    width: 15%;
     margin: 1.5%;
     border-radius: 10px;
-    cursor:pointer;
+    cursor: pointer;
 }
-.heading{
-    height:70%;
-    width:50%;
+
+.heading {
+    height: 70%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.7rem;
-    color:white;
+    color: white;
     font-family: 'Signika', sans-serif;
 }
-.heading-content{
-    height:70%;
-    width:50%;
+
+.heading-content {
+    height: 70%;
+    width: 50%;
     display: none;
-    justify-content: center;
-    align-items: center;
-    padding:2%;
-    color:rgb(185, 183, 183);
+    /* justify-content: center;
+    align-items: center; */
+    padding: 2%;
+    color: rgb(185, 183, 183);
 }
-.show{
-    display:flex;
+
+.show {
+    display: block;
 }
-.show-content{
+
+.show-content {
     animation-name: fade-in;
     animation-duration: 0.7s;
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-.div-not-active{
+
+.div-not-active {
     transform: rotate(-90deg);
     height: 70%;
-    width:50%;
-   
+    width: 50%;
+
 }
 
-.active{
-    width:70%;
-}
-.not-active{
-    width:15%;
+.active {
+    width: 70%;
 }
 
-.horiz{
+.not-active {
+    width: 15%;
+}
+
+.horiz {
     animation-name: horizontal;
     animation-duration: 0.7s;
     animation-timing-function: ease-in;
@@ -253,7 +270,7 @@ a:hover {
 
 }
 
-.vert{
+.vert {
     animation-name: vertical;
     animation-duration: 0.7s;
     animation-timing-function: ease-in;
@@ -265,19 +282,22 @@ a:hover {
 
 
 @keyframes fade-in {
-    0%{
-        opacity:0;
+    0% {
+        opacity: 0;
     }
-    33%{
-        opacity:0;
+
+    33% {
+        opacity: 0;
     }
-    66%{
-        opacity:1;
+
+    66% {
+        opacity: 1;
     }
-    100%{
-        opacity:1;
+
+    100% {
+        opacity: 1;
     }
-    
+
 }
 
 @keyframes blink {
@@ -297,144 +317,164 @@ a:hover {
         opacity: 0
     }
 }
+
 @keyframes horizontal {
-    0%{
+    0% {
         transform: rotate(-90deg);
     }
-    20%{
+
+    20% {
         transform: rotate(-72deg);
     }
-    40%{
+
+    40% {
         transform: rotate(-54deg);
     }
-    60%{
+
+    60% {
         transform: rotate(-36deg);
     }
-    80%{
+
+    80% {
         transform: rotate(-18deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
+
 @keyframes vertical {
-    0%{
+    0% {
         transform: rotate(0);
     }
-    20%{
+
+    20% {
         transform: rotate(-18deg);
     }
-    40%{
+
+    40% {
         transform: rotate(-36deg);
     }
-    60%{
+
+    60% {
         transform: rotate(-54deg);
     }
-    80%{
+
+    80% {
         transform: rotate(-72deg);
     }
-    100%{
+
+    100% {
         transform: rotate(-90deg);
     }
 }
 
 /* media queries */
 @media only screen and (max-width: 768px) {
-    .content-container {
+
+
+
+    .list{
         display: none;
-        top: 100%;
-        width: 40%;
-        flex-basis: 40%;
         flex-direction: column;
-
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
     }
-
-    .contents {
-        display: flex;
-        justify-content: end;
-    }
-
     .hamburger {
-        flex-basis: 30%;
+        flex-basis: 10%;
         display: flex;
-        justify-content: flex-end;
+        margin-left: auto;
     }
-    .brand{
-        display:none;
-    }
-    .intro{
-        height:70vh;
+
+    .intro {
+        height: 70vh;
         justify-content: center;
         align-items: center;
         margin-bottom: 10%;
     }
-    .intro-content{
-        width:100%;
-        height:auto;
+
+    .intro-content {
+        width: 100%;
+        height: auto;
         font-size: 2rem;
-        margin-left:0;
-        margin-top:4%;
+        margin-left: 0;
+        margin-top: 4%;
         text-align: center;
     }
-    .about{
+
+    .about {
         padding-left: 8%;
     }
-    .about-me{
+
+    .about-me {
         display: flex;
         flex-direction: column;
-        height:55vh;
-        width:80vw;
-        margin:0 auto;
+        height: 55vh;
+        width: 80vw;
+        margin: 0 auto;
     }
-    .h-left{
-        color:white;
+
+    .h-left {
+        color: white;
         align-items: center;
         justify-content: center;
         font-family: 'Signika', sans-serif;
         font-size: 1.25rem;
         display: flex;
-        height:auto;
-        width:auto;
+        height: auto;
+        width: auto;
     }
-    .c-right{
-        color:white;
+
+    .c-right {
+        color: white;
         font-family: 'Signika', sans-serif;
         display: flex;
-        height:100%;
-        width:100%;
+        height: 100%;
+        width: 100%;
     }
-    .about-me-info{
-        width:100%;
-        height:70%;
-        line-height:1.8;
-        color:rgb(185, 183, 183)
+
+    .about-me-info {
+        width: 100%;
+        height: 70%;
+        line-height: 1.8;
+        color: rgb(185, 183, 183)
     }
 
 
-    .academics{
-        display:flex;
-        height:auto;
-        width:100vw;
-        margin:1% auto;
+    .academics {
+        display: flex;
+        height: auto;
+        width: 100vw;
+        margin: 1% auto;
         box-sizing: border-box;
     }
 
-    .college,.inter,.high-schl{
+    .college,
+    .inter,
+    .high-schl {
         flex-direction: column;
     }
-    .heading-content{
-        height:70%;
-        width:100%;
-        justify-content: center;
-        align-items: center;
-        color:rgb(185, 183, 183);
-        margin:2%;
-        padding:8%;
+
+    .heading-content {
+        position: relative;
+        height: 70%;
+        width: 100%;
+        color: rgb(185, 183, 183);
+        margin: 2%;
+        padding: 8%;
+        font-family: 'Signika', sans-serif;
     }
-    .show-content{
-        height:100%;
+
+    .show-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
     }
-    .horiz{
+
+    .horiz {
         animation-name: horizontal;
         animation-duration: 0.7s;
         animation-timing-function: ease-in;
@@ -442,10 +482,10 @@ a:hover {
         animation-fill-mode: forwards;
         border-bottom: 2px dashed white;
         border-right: none;
-    
+
     }
-    
-    .vert{
+
+    .vert {
         animation-name: vertical;
         animation-duration: 0.7s;
         animation-timing-function: ease-in;
@@ -454,18 +494,18 @@ a:hover {
         border-bottom: none;
     }
 
-    .heading{
-        height:50%;
-        width:100%;
+    .heading {
+        height: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.25rem;
-        color:white;
+        color: white;
         margin: 2%;
         font-family: 'Signika', sans-serif;
     }
-    
+
 
 
 }
