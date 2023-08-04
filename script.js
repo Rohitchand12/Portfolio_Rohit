@@ -1,4 +1,5 @@
 let toggler = document.querySelector('.hamburger')
+let innerdiv = document.querySelector('.nav-inner-div')
 let info = document.querySelector('.info')
 let sentence = "I'm a\xa0";
 let panels = document.querySelectorAll('.panel') //3 panels
@@ -8,6 +9,15 @@ let carousel = [
     {text:'Student', color:'#5800FF'},
     {text:'Learner', color:'#16FF00'}
 ]
+
+///////////////hamburger code.///////////////////
+
+toggler.addEventListener('click' , ()=>{
+    innerdiv.classList.toggle('shownavbar');
+})
+
+
+
 
 panels.forEach((panel)=>{
     panel.addEventListener('click',()=>{
@@ -33,12 +43,7 @@ const removeActive = ()=>{
 }
 
 
-toggler.addEventListener('click', () => {
-   document.querySelector('nav').classList.add("navbar-expand");
-   let list = document.querySelector('.list');
 
-   list.style.display = 'flex';
-})
 
 const multipleTyping = async(carousel,sentence, delay)=>{
 
